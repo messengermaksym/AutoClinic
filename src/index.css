@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-deep: #2d1b4e;
+  --color-brand-purple: #5a3791;
+  --color-brand-accent: #00c6ff;
+  --color-brand-dark: #0f172a;
+  --color-brand-light: #f8fafc;
+  --font-sans: "Inter", "sans-serif";
+}
+
+@utility hero-bg {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(45, 27, 78, 0.9) 100%), 
+              url('https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+}
+
+@utility glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-brand-light text-slate-800 antialiased selection:bg-brand-purple selection:text-white scroll-smooth;
+}
